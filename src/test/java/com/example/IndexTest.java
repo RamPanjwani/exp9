@@ -27,7 +27,6 @@ public class IndexTest {
         String url = "file:///C:/ProgramData/Jenkins/.jenkins/workspace/exp9/src/test/resources/index.html";
         driver.get(url);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("num1")));
         WebElement num1 = driver.findElement(By.id("num1"));
         WebElement num2 = driver.findElement(By.id("num2"));
         WebElement btn = driver.findElement(By.id("btn"));
