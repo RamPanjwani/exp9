@@ -1,5 +1,4 @@
 package com.example;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +11,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
-
 public class IndexTest {
     private WebDriver driver;
     @Before
@@ -20,6 +18,8 @@ public class IndexTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
         options.addArguments("--allow-file-access-from-files");
+        options.addArguments("--enable-file-cookies");
+        options.addArguments("--disable-web-security");
         driver = new ChromeDriver(options);
     }
     @Test
